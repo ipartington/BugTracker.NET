@@ -1545,6 +1545,9 @@
       <DependentUpon>write_posts.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\Logs\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -1586,12 +1589,6 @@
   -->
   <Target Name="PrecompileWeb" AfterTargets="build" Condition="'$(MvcBuildViews)'=='true'">
     <Message Text="Starting AspNetCompiler for $(ProjectDir)" Importance="high" />
-    <AspNetCompiler
-      VirtualPath="temp"
-      TargetPath="$(ProjectDir)/obj/precompiled"
-      Force="true"
-      PhysicalPath="$(WebProjectOutputDir)"
-        Debug="true"
-    />
+    <AspNetCompiler VirtualPath="temp" TargetPath="$(ProjectDir)/obj/precompiled" Force="true" PhysicalPath="$(WebProjectOutputDir)" Debug="true" />
   </Target>
 </Project>
