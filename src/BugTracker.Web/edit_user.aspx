@@ -583,16 +583,9 @@ select scope_identity()");
 				sql = sql.AddParameterWithValue("createdby", Convert.ToString(security.user.usid));
 
 				// only admins can create admins.
-				if (security.user.is_admin)
-				{
-					sql = sql.AddParameterWithValue("ad", Util.bool_to_string(admin.Checked));
-				}
-				else
-				{
-					sql = sql.AddParameterWithValue("ad","0");
-				}
+//			    sql = sql.AddParameterWithValue("ad", security.user.is_admin ? Util.bool_to_string(admin.Checked) : "0");
 
-                // fill the password field with some junk, just temporarily.
+			    // fill the password field with some junk, just temporarily.
                 sql = sql.AddParameterWithValue("pw", Convert.ToString(new Random().Next()));
 
                 // insert the user

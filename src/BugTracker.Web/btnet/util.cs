@@ -766,7 +766,6 @@ begin
 	delete from #temp where og_external_user = 1 and us_org <> @userorg 
 end
 
-@limit_users
 
 select us_id, us_username, us_email from #temp order by us_username
 
@@ -785,11 +784,11 @@ drop table #temp");
 				sql= new SQLString(@"
 /* get related users 2 */
 select  pj_id, us_id,
-case when @fullnames then
+case when @fullnames = '1=1' then
     case when len(isnull(us_firstname,'') + ' ' + isnull(us_lastname,'')) > 1
 	then isnull(us_firstname,'') + ' ' + isnull(us_lastname,'')
     else us_username end
-else us_username end us_username,
+else us_username end as us_username,
 isnull(us_email,'') us_email
 into #temp
 from projects, users
@@ -800,9 +799,6 @@ where pj_id not in
 )
 
 
-@limit_users
-
-
 if @og_external_user = 1 -- external
 and @og_other_orgs_permission_level = 0 -- other orgs
 begin
@@ -810,7 +806,7 @@ begin
 	from #temp a
 	inner join users b on a.us_id = b.us_id
 	inner join orgs on b.us_org = og_id
-	where og_external_user = 0 or b.us_org = @user.org
+	where og_external_user = 0 or b.us_org = @userorg
 	order by a.us_username
 end
 else

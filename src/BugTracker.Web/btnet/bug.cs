@@ -859,7 +859,10 @@ where bg_id = @bg");
                     bg_project_custom_dropdown_value3)
                     values (@short_desc, @tags, @reported_user,  @reported_user, getdate(), getdate(),
                     @project, @org,
-                    @category, @priority, @status, @assigned_user, @udf)");
+                    @category, @priority, @status, @assigned_user, @udf,
+                    @bg_project_custom_dropdown_value1,
+                    @bg_project_custom_dropdown_value2,
+                    @bg_project_custom_dropdown_value3)");
 
             sql = sql.AddParameterWithValue("@short_desc", short_desc);
             sql = sql.AddParameterWithValue("@tags", tags);
@@ -871,6 +874,9 @@ where bg_id = @bg");
             sql = sql.AddParameterWithValue("@status", Convert.ToString(statusid));
             sql = sql.AddParameterWithValue("@assigned_user", Convert.ToString(assigned_to_userid));
             sql = sql.AddParameterWithValue("@udf", Convert.ToString(udfid));
+            sql = sql.AddParameterWithValue("@bg_project_custom_dropdown_value1", Convert.ToString(""));
+            sql = sql.AddParameterWithValue("@bg_project_custom_dropdown_value2", Convert.ToString(""));
+            sql = sql.AddParameterWithValue("@bg_project_custom_dropdown_value3", Convert.ToString(""));
 //TODO: Add custom columns
 
 

@@ -418,7 +418,7 @@
     <Content Include="about.html" />
     <Content Include="accept.png" />
     <Content Include="add.png" />
-    <Content Include="add_attachment.aspx" />
+    <Content Include="Attachments\add_attachment.aspx" />
     <Content Include="add_customfield.aspx" />
     <Content Include="admin.aspx" />
     <Content Include="ajax.aspx" />
@@ -667,11 +667,11 @@
     <Content Include="write_posts.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="add_attachment.aspx.cs">
+    <Compile Include="Attachments\add_attachment.aspx.cs">
       <DependentUpon>add_attachment.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="add_attachment.aspx.designer.cs">
+    <Compile Include="Attachments\add_attachment.aspx.designer.cs">
       <DependentUpon>add_attachment.aspx</DependentUpon>
     </Compile>
     <Compile Include="add_customfield.aspx.cs">

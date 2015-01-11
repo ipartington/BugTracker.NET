@@ -364,7 +364,7 @@ Distributed under the terms of the GNU General Public License
 
         if (permission_level != Security.PERMISSION_READONLY)
         {
-            string attachment_link = "<img src=attach.gif align=top>&nbsp;<a href=\"javascript:open_popup_window('add_attachment.aspx','add attachment ',"
+            string attachment_link = "<img src=attach.gif align=top>&nbsp;<a href=\"javascript:open_popup_window('attachments/add_attachment.aspx','add attachment ',"
                 + Convert.ToString(id)
                 + ",600,300)\" title='Attach an image, document, or other file to this item'>add attachment</a>";
             attachment.InnerHtml = attachment_link;
@@ -1910,7 +1910,7 @@ order by us_username; ");
         var sql = new SQLString(@"
         insert into bug_posts
         (bp_bug, bp_user, bp_date, bp_comment, bp_type)
-        values(@id, @us, getdate(), 'Changed ' + @field + ' from ' + @oldValue + ' to ' + @newValue, 'update'");
+        values(@id, @us, getdate(), 'Changed ' + @field + ' from ' + @oldValue + ' to ' + @newValue, 'update')");
 
         sql.AddParameterWithValue("id", Convert.ToString(id));
         sql.AddParameterWithValue("us", Convert.ToString(security.user.usid));
