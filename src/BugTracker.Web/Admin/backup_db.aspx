@@ -4,25 +4,12 @@
 Copyright 2002-2011 Corey Trager
 Distributed under the terms of the GNU General Public License
 -->
-<!-- #include file = "inc.aspx" --><% @Import Namespace="btnet" %>
-<% @Import Namespace="System.Data" %>
-<% @Import Namespace="System.Collections.Generic" %>
-<%@ Import Namespace="btnet.Mail" %>
 
-
-
-<script language="C#" runat="server">
-
-
- 
-
-    
-</script>
 
 <html>
 <head>
 <title id="titl" runat="server">btnet backup db</title>
-<link rel="StyleSheet" href="btnet.css" type="text/css">
+<link rel="StyleSheet" href="../btnet.css" type="text/css">
 </head>
 <body>
 <% Security.write_menu(Response, "admin"); %>

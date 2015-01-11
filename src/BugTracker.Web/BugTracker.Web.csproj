@@ -105,6 +105,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\backup_db.aspx" />
     <Content Include="Admin\manage_logs.aspx" />
     <Content Include="btnet_css_for_email.css.renamed" />
     <Content Include="Content\images\ExternalLink.png" />
@@ -428,7 +429,6 @@
     <Content Include="arrow_down.png" />
     <Content Include="arrow_up.png" />
     <Content Include="attach.gif" />
-    <Content Include="backup_db.aspx" />
     <Content Include="brick.png" />
     <Content Include="btnet.css" />
     <Content Include="btnet_base.css" />
@@ -667,6 +667,13 @@
     <Content Include="write_posts.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\backup_db.aspx.cs">
+      <DependentUpon>backup_db.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\backup_db.aspx.designer.cs">
+      <DependentUpon>backup_db.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\manage_logs.aspx.cs">
       <DependentUpon>manage_logs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -710,13 +717,6 @@
       <DependentUpon>ajax2.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\LoggingConfig.cs" />
-    <Compile Include="backup_db.aspx.cs">
-      <DependentUpon>backup_db.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="backup_db.aspx.designer.cs">
-      <DependentUpon>backup_db.aspx</DependentUpon>
-    </Compile>
     <Compile Include="BasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>

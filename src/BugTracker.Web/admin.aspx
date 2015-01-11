@@ -15,42 +15,36 @@ var nagspan
 var color
 var hex_chars = "0123456789ABCDEF"
 
-function decimal_to_hex(dec)
-{
-	var result = 
-		hex_chars.charAt(Math.floor(dec / 16))
-		+ hex_chars.charAt(dec % 16)
-	return result
+function decimal_to_hex(dec) {
+    var result = hex_chars.charAt(Math.floor(dec / 16)) + hex_chars.charAt(dec % 16);
+    return result;
 }
 
-function RGB2HTML(red, green, blue)
-{
-	var rgb = "#"
+function RGB2HTML(red, green, blue) {
+    var rgb = "#";
 	rgb += String(decimal_to_hex(red));
 	rgb += String(decimal_to_hex(green));
 	rgb += String(decimal_to_hex(blue));
-	return rgb
+    return rgb;
 }
 
-function start_animation()
-{
-	nagspan = document.getElementById("nagspan")
+function start_animation() {
+    nagspan = document.getElementById("nagspan");
 // cc = 204, 66 = 102
-	color = 1
-	timer = setInterval(timer_callback,5)
+    color = 1;
+    var timer = setInterval(timer_callback, 5);
 }
 
-function timer_callback()
-{
-	color += 1
-	
-	new_color = RGB2HTML(255, color * 2, color)
-	
-	nagspan.style.background = new_color
+function timer_callback() {
+    color += 1;
+
+    new_color = RGB2HTML(255, color * 2, color);
+
+    nagspan.style.background = new_color;
 	
 	if (color == 102) // if the color is now orange
 	{
-		clearInterval(timer)
+	    clearInterval(timer);
 	}
 }
 
