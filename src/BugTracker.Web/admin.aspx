@@ -111,7 +111,7 @@ Is BugTracker.NET helping you or your company?  Please consider <a href=javascri
     </span><br></li>
 
 <li class=listitem><a href=backup_db.aspx>Backup Database</a></li>
-<li class=listitem><a href=manage_logs.aspx>Manage Logs</a></li>
+<li class=listitem><a href=Admin/manage_logs.aspx>Manage Logs</a></li>
     <li>
         <form runat="server" ID="SearchSettingsForm"><asp:Button ID="reindexLink" runat="server" OnClick="ReindexAllBugs" Text="Recreate Search Index"></asp:Button></form>
     </li>

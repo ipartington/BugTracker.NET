@@ -105,6 +105,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\manage_logs.aspx" />
     <Content Include="btnet_css_for_email.css.renamed" />
     <Content Include="Content\images\ExternalLink.png" />
     <Content Include="Content\images\ExternalLink.svg" />
@@ -593,7 +594,6 @@
     <Content Include="loginnt.aspx" />
     <Content Include="logoff.aspx" />
     <Content Include="lucene_syntax.html" />
-    <Content Include="manage_logs.aspx" />
     <Content Include="massedit.aspx" />
     <Content Include="mbtnet_base.css" />
     <Content Include="mbug.aspx" />
@@ -667,6 +667,13 @@
     <Content Include="write_posts.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\manage_logs.aspx.cs">
+      <DependentUpon>manage_logs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\manage_logs.aspx.designer.cs">
+      <DependentUpon>manage_logs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Attachments\add_attachment.aspx.cs">
       <DependentUpon>add_attachment.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1158,13 +1165,6 @@
     </Compile>
     <Compile Include="Mail\MailFormat.cs" />
     <Compile Include="Mail\MailPriority.cs" />
-    <Compile Include="manage_logs.aspx.cs">
-      <DependentUpon>manage_logs.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="manage_logs.aspx.designer.cs">
-      <DependentUpon>manage_logs.aspx</DependentUpon>
-    </Compile>
     <Compile Include="massedit.aspx.cs">
       <DependentUpon>massedit.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
