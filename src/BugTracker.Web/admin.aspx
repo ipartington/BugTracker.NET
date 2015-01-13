@@ -77,7 +77,7 @@ Is BugTracker.NET helping you or your company?  Please consider <a href=javascri
 <li class=listitem><a href=users.aspx>Users</a></li>
 <li class=listitem><a href=orgs.aspx>Organizations</a></li>
 <li class=listitem><a href=projects.aspx>Projects</a></li>
-<li class=listitem><a href=categories.aspx>Categories</a></li>
+    <li class=listitem><a href=category/categories.aspx>Categories</a></li>
 
 <li class=listitem><a href=priorities.aspx>Priorities</a></li>
 

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace btnet {
+namespace btnet.Category {
     
     
     public partial class edit_category {

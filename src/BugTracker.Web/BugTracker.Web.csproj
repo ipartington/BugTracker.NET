@@ -108,6 +108,9 @@
     <Content Include="Admin\backup_db.aspx" />
     <Content Include="Admin\manage_logs.aspx" />
     <Content Include="btnet_css_for_email.css.renamed" />
+    <Content Include="Category\categories.aspx" />
+    <Content Include="Category\delete_category.aspx" />
+    <Content Include="Category\edit_category.aspx" />
     <Content Include="Content\images\ExternalLink.png" />
     <Content Include="Content\images\ExternalLink.svg" />
     <Content Include="Content\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
@@ -437,7 +440,6 @@
     <Content Include="bugtracker_screen_capture.jpeg" />
     <Content Include="bug_list.js" />
     <Content Include="camera.png" />
-    <Content Include="categories.aspx" />
     <Content Include="change_password.aspx" />
     <Content Include="clock.png" />
     <Content Include="comment.png" />
@@ -462,7 +464,6 @@
     <Content Include="delete.png" />
     <Content Include="delete_attachment.aspx" />
     <Content Include="delete_bug.aspx" />
-    <Content Include="delete_category.aspx" />
     <Content Include="delete_comment.aspx" />
     <Content Include="delete_customfield.aspx" />
     <Content Include="delete_org.aspx" />
@@ -543,7 +544,6 @@
     <Content Include="edit_attachment.aspx" />
     <Content Include="edit_bug.aspx" />
     <Content Include="edit_bug.js" />
-    <Content Include="edit_category.aspx" />
     <Content Include="edit_comment.aspx" />
     <Content Include="edit_customfield.aspx" />
     <Content Include="edit_custom_html.aspx" />
@@ -721,12 +721,26 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="btnet\SQLString.cs" />
-    <Compile Include="categories.aspx.cs">
+    <Compile Include="Category\categories.aspx.cs">
       <DependentUpon>categories.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="categories.aspx.designer.cs">
+    <Compile Include="Category\categories.aspx.designer.cs">
       <DependentUpon>categories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Category\delete_category.aspx.cs">
+      <DependentUpon>delete_category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Category\delete_category.aspx.designer.cs">
+      <DependentUpon>delete_category.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Category\edit_category.aspx.cs">
+      <DependentUpon>edit_category.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Category\edit_category.aspx.designer.cs">
+      <DependentUpon>edit_category.aspx</DependentUpon>
     </Compile>
     <Compile Include="change_password.aspx.cs">
       <DependentUpon>change_password.aspx</DependentUpon>
@@ -766,13 +780,6 @@
     </Compile>
     <Compile Include="delete_bug.aspx.designer.cs">
       <DependentUpon>delete_bug.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="delete_category.aspx.cs">
-      <DependentUpon>delete_category.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="delete_category.aspx.designer.cs">
-      <DependentUpon>delete_category.aspx</DependentUpon>
     </Compile>
     <Compile Include="delete_comment.aspx.cs">
       <DependentUpon>delete_comment.aspx</DependentUpon>
@@ -878,13 +885,6 @@
     </Compile>
     <Compile Include="edit_bug.aspx.designer.cs">
       <DependentUpon>edit_bug.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="edit_category.aspx.cs">
-      <DependentUpon>edit_category.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="edit_category.aspx.designer.cs">
-      <DependentUpon>edit_category.aspx</DependentUpon>
     </Compile>
     <Compile Include="edit_comment.aspx.cs">
       <DependentUpon>edit_comment.aspx</DependentUpon>
